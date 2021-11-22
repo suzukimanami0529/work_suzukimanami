@@ -39,20 +39,23 @@ img {
     vertical-align: bottom;
     border: none;
 }
-h1 {
-    font-size: 25px;
-    padding-top: 15px;
-}
 .wrap {
     max-width: 960px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+}
+h1 {
+    font-size: 25px;
 }
 .menu ul {
     display: flex;
     justify-content: flex-end;
 }
 .menu ul li {
-    padding: 5px 25px;
+    padding: 10px 25px;
     font-size: 15px;
 }
 li + li {
