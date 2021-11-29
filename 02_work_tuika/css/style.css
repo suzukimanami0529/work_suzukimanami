@@ -14,9 +14,9 @@ p {
     margin: 0;
     margin: 0;
     padding: 0;
-    line-height: 10 px;
+    line-height: 2;
     /*デフォルトの文字色、font-familyを予め当てておく*/
-    color: #101010;
+    color: #707070;
     font-family: "Georgia", "游明朝", "YuMincho", "Hiragino Mincho ProN",
         "Meiryo", "serif";
 }
@@ -39,19 +39,19 @@ img {
     border: none;
 }
 
-body {
-    margin: 60px auto;
-    max-width: 1031px;
+.body {
+    margin: 60px 40px;
 }
 .wrap {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     margin-bottom: 60px;
 }
-.title h1 {
-    font-weight: bold;
-    margin-bottom: 10px;
+h1 {
     font-size: 36px;
+    color: #101010;
+    line-height: 1;
 }
 .title p {
     color: #707070;
@@ -59,21 +59,20 @@ body {
 }
 .menu {
     display: flex;
-    justify-content: flex-end;
     align-items: flex-end;
     padding-bottom: 5px;
 }
 .menu li {
     padding: 0 18px;
 }
-.fas {
-    color: #101010;
+.menu li i {
+    color: #707070;
     padding-left: 10px;
 }
 .wrap img {
-    width: 25px;
-    height: 25px;
-    padding-top: 30px;
+    width: 23px;
+    height: 23px;
+    padding-bottom: 15px;
 }
 .mainimg {
     margin-bottom: 60px;
@@ -97,8 +96,9 @@ body {
 .content-right {
     width: 70%;
 }
-.content-right h2 {
+h2 {
     padding-bottom: 30px;
+    color: #101010;
 }
 .content-right p {
     font-size: 16px;
@@ -113,29 +113,109 @@ body {
     width: 20px;
     height: 20px;
     text-align: center;
+    line-height: 1;
     color: #707070;
     padding: 10px;
     margin: 10px;
     border: 1px solid #999;
 }
+.button:first-child {
+    color: #101010;
+    background-color: #eee;
+}
 .button:last-child {
     width: 60px;
     font-size: 15px;
+    line-height: 1.5;
+}
+.button-group div i {
+    color: #707070;
+    padding-left: 6px;
+    font-size: 10px;
+}
+.serch {
+    width: 200px;
+    height: 40px;
+    border: 1px solid rgb(221, 221, 221);
+    color: #999;
+    line-height: 2.5;
+    padding-left: 10px;
+    margin: 0 0 80px auto;
 }
 .line {
     width: 100%;
     height: 1px;
-    border-bottom: 1px solid #dadada;
+    border-bottom: 1px solid #999;
     margin-bottom: 60px;
 }
 .footer {
     display: flex;
     justify-content: space-between;
 }
-.footer div:first-child {
+.footer > div {
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+.profil {
     width: 40%;
+}
+.footer-right {
+    width: 22%;
+    padding-top: 10px;
+}
+.footer div:last-child {
+    padding-right: 0;
+}
+.profil-top {
+    display: flex;
+}
+.john-face {
+    width: 160px;
+}
+.name {
+    color: #101010;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+.name-sns img {
+    width: 25px;
+    height: 25px;
+    padding-right: 7px;
 }
 .footer-bold {
     font-weight: bold;
-    padding-bottom: 50px;
+    color: #101010;
+    padding-bottom: 20px;
+}
+.footer-under {
+    border-bottom: 1px solid #eee;
+    line-height: 1.2;
+    margin-bottom: 2px;
+}
+.footer-date {
+    color: #999;
+}
+.footer-right ul li {
+    margin-bottom: 15px;
+}
+.site-bottom {
+    display: flex;
+}
+.site-bottom div:last-child {
+    margin: 0 auto;
+}
+.copyright {
+    font-size: 85%;
+    color: #999;
+    text-align: center;
+}
+.sns {
+    display: flex;
+}
+.sns-icon img {
+    width: 25px;
+    height: 25px;
+    padding-left: 20px;
+    padding-bottom: 5px;
 }
