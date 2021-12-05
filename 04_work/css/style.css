@@ -199,6 +199,9 @@ main {
     margin: 0 auto;
     padding-bottom: 25px;
 }
+.gallery-photo {
+    display: flex;
+}
 .gallery-photo img {
     width: 20%;
 }
@@ -255,7 +258,7 @@ iframe {
 .footer-contents {
     display: flex;
 }
-.footer-contents > div {
+.footer-contents div img {
     width: 226.7676px;
     height: 50.2852px;
 }
@@ -269,4 +272,11 @@ iframe {
 }
 .copyright {
     text-align: center;
+}
+
+.top img {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 125px;
 }
