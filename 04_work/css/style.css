@@ -130,6 +130,7 @@ main {
 #aboutus {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 108px;
 }
 #aboutus div:first-child {
@@ -137,7 +138,7 @@ main {
 }
 #aboutus div:last-child {
     width: 50%;
-    padding: 68px 0 40px 4.06%;
+    padding-left: 40px;
     box-sizing: border-box;
 }
 #aboutus > div > img {
@@ -145,8 +146,7 @@ main {
     width: 100%;
 }
 #aboutus-font {
-    width: 272.3936 px;
-    height: 77.3594px;
+    width: 272.3936px;
     padding-bottom: 55px;
 }
 .about-title {
@@ -164,7 +164,6 @@ main {
 }
 #menu-font {
     width: 151.3853px;
-    height: 78.3262px;
     margin: 0 auto;
     padding-bottom: 45px;
 }
@@ -184,7 +183,7 @@ main {
     font-size: 38px;
     margin-top: -10px;
     padding-left: 12px;
-    padding-bottom: 24px;
+    padding-bottom: 17px;
 }
 .menu-text {
     line-height: 1.47;
@@ -195,7 +194,6 @@ main {
 }
 #gallery-font {
     width: 245.1836px;
-    height: 78.3262px;
     margin: 0 auto;
     padding-bottom: 25px;
 }
@@ -212,7 +210,6 @@ main {
 }
 #event-font {
     width: 173.8242px;
-    height: 78.3262px;
     margin: 0 auto;
     padding-bottom: 40px;
 }
@@ -239,7 +236,6 @@ main {
 }
 #access-font {
     width: 213.8354px;
-    height: 78.3262px;
     margin: 0 auto;
     padding-bottom: 47px;
 }
@@ -258,9 +254,8 @@ iframe {
 .footer-contents {
     display: flex;
 }
-.footer-contents div img {
+.footer-contents p img {
     width: 226.7676px;
-    height: 50.2852px;
 }
 .footer-text {
     padding-left: 104px;
