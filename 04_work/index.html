@@ -8,6 +8,7 @@
     <title>第4回work</title>
     <meta name="description" content="デザインカフェのサイトです">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -26,20 +27,42 @@
                         <li><a href="#access">ACCESS</a></li>
                     </ul>
                 </nav>
+                <div class="sp_btn"><span></span></div>
+                <nav class="sp_nav">
+                    <ul>
+                        <li><a href="#aboutus">ABOUT US</a></li>
+                        <li><a href="#menu">MENU</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="#event">EVENT</a></li>
+                        <li><a href="#access">ACCESS</a></li>
+                    </ul>
+                </nav>
             </div>
             <div class="slider">
-                <img src="images/pc_first-100.jpg" alt="カフェの様子">
+                <picture>
+                    <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                    <img src="images/pc_first-100.jpg" alt="カフェの様子">
+                </picture>
             </div>
         </header>
         <main>
             <section class="main-under">
                 <p>Have a happy day From a cup of coffee.</p>
                 <p class="main-text">ハッピーに溢れる1日を<br>1杯のコーヒーから。</p>
+
+                <p class="main-under-bun">
+                    毎日を丁寧に大切に過ごしたい。<br>だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間と<br>こだわりのコーヒーを提供したい。</p>
                 <p>毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
             </section>
             <section id="aboutus">
+                <h2 id="aboutus-font-sp">
+                    <img src="images/about_us@2x.png" alt="ABOUT USの文字">
+                </h2>
                 <div>
-                    <img src="images/pc_about-100.jpg" alt="コーヒーの写真">
+                    <picture class="aboutus-img">
+                        <source srcset="images/about_us@2x-100.jpg" media="(max-width:767px)">
+                        <img src="images/pc_about-100.jpg" alt="コーヒーの写真">
+                    </picture>
                 </div>
                 <div>
                     <h2 id="aboutus-font">
@@ -96,11 +119,20 @@
                     <img src="images/event@2x.png" alt="EVENTの文字">
                 </h2>
                 <div class="event-box">
-                    <ul>
-                        <li>2020.06.23<span><a href="">7月はイベント出店のため0/0お休みします</a></span></li>
-                        <li>2020.03.15<span><a href="">春の新商品新発売。話題のあのブランドとコラボ</a></span></li>
-                        <li>2020.02.06<span><a href="">コーヒーの日で30％OFFイベントを開催［3日間限定］</a></span></li>
-                    </ul>
+                    <dl>
+                        <div>
+                            <dt>2020.06.23</dt>
+                            <dd><a href="">7月はイベント出店のため0/0お休みします</a></dd>
+                        </div>
+                        <div>
+                            <dt>2020.03.15</dt>
+                            <dd><a href="">春の新商品新発売。話題のあのブランドとコラボ</a></dd>
+                        </div>
+                        <div>
+                            <dt>2020.02.06</dt>
+                            <dd><a href="">コーヒーの日で30％OFFイベントを開催［3日間限定］</a></dd>
+                        </div>
+                    </dl>
                 </div>
             </section>
             <section id="access">
@@ -136,6 +168,15 @@
             </a>
         </div>
     </div>
+    <script>
+        $(function () {
+            $('.sp_btn,.sp_nav li').click(function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+
+            });
+        });
+    </script>
 </body>
 
 </html>

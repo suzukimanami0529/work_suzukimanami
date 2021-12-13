@@ -61,12 +61,11 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 7.08% 0 2.81%;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    box-sizing: border-box;
+    margin: 0 auto;
 }
 .header_logo {
     width: 226.76px;
@@ -125,7 +124,9 @@ main {
     font-size: 23px;
     line-height: 1.65;
 }
-
+.main-under-bun {
+    display: none;
+}
 /* ABOUT US */
 #aboutus {
     display: flex;
@@ -141,13 +142,16 @@ main {
     padding-left: 40px;
     box-sizing: border-box;
 }
-#aboutus > div > img {
+.aboutus-img img {
     border-radius: 0 0 82px 0;
     width: 100%;
 }
 #aboutus-font {
     width: 272.3936px;
     padding-bottom: 55px;
+}
+#aboutus-font-sp {
+    display: none;
 }
 .about-title {
     font-size: 44px;
@@ -220,12 +224,15 @@ main {
     border: 3.6843px solid #4f260b;
     box-sizing: border-box;
 }
-.event-box ul li {
+.event-box dl div {
+    display: flex;
+}
+.event-box dl dt {
     padding-left: 15.9%;
     padding-bottom: 22px;
     font-size: 23px;
 }
-.event-box ul li span {
+.event-box dl dd {
     padding-left: 5.6%;
     text-decoration: underline #4f260b;
 }
@@ -274,4 +281,256 @@ iframe {
     right: 20px;
     bottom: 20px;
     width: 125px;
+}
+
+.sp_nav {
+    display: none;
+}
+@media screen and (max-width: 1024px) {
+    .header_logo {
+        width: 187.5195px;
+    }
+    .pc_nav {
+        display: none;
+    }
+    .sp_btn {
+        position: absolute;
+        top: 10px;
+        right: 24px;
+        z-index: 100;
+        height: 30px;
+        cursor: pointer;
+    }
+    .sp_btn span {
+        width: 33px;
+        height: 3px;
+        border-radius: 5px;
+        background: #fff;
+        display: block;
+        position: relative;
+        top: 22px;
+    }
+    .sp_btn span::before,
+    .sp_btn span::after {
+        content: "";
+        display: block;
+        background: #fff;
+        border-radius: 5px;
+        width: 33px;
+        height: 3px;
+        position: absolute;
+        transition: 0.3s;
+    }
+    .sp_btn span::before {
+        bottom: 8px;
+    }
+    .sp_btn span::after {
+        top: 8px;
+    }
+    .open span {
+        background: transparent;
+    }
+    .open span::before {
+        bottom: 0px;
+        transform: rotate(45deg);
+    }
+    .open span::after {
+        top: 0px;
+        transform: rotate(135deg);
+    }
+    .sp_nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.7);
+        height: 100vh;
+        width: 100%;
+    }
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+    .sp_nav li {
+        color: #fff;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+            "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+        text-align: center;
+        padding: 20px;
+        font-size: 25px;
+    }
+    .main-under p:first-child {
+        font-size: 3vw;
+    }
+    .main-text {
+        font-size: 8vw;
+    }
+
+    .about-title {
+        font-size: 4.3vw;
+        padding-bottom: 20px;
+    }
+    #aboutus-font {
+        width: 250px;
+        padding-bottom: 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    /* メインの下 */
+    .main-under {
+        margin-bottom: 65px;
+    }
+    .main-under p:first-child {
+        font-size: 4.2vw;
+        padding-bottom: 25px;
+    }
+    .main-text {
+        padding-bottom: 25px;
+        font-size: 10vw;
+    }
+    .main-under p:last-child {
+        display: none;
+    }
+    .main-under-bun {
+        display: block;
+        font-size: 4.5vw;
+        line-height: 1.875;
+    }
+    /* ABOUT US */
+    #aboutus {
+        display: block;
+        margin-bottom: 60px;
+    }
+    #aboutus div:first-child {
+        width: 100%;
+    }
+    #aboutus div:last-child {
+        width: 100%;
+        padding-left: 0;
+        box-sizing: border-box;
+    }
+    #aboutus-font {
+        display: none;
+    }
+    #aboutus-font-sp {
+        display: block;
+        width: 40vw;
+        padding-bottom: 15px;
+        margin: 0 auto;
+    }
+    .about-title {
+        font-size: 10vw;
+        line-height: 1.25;
+        padding-bottom: 30px;
+    }
+    .about-text {
+        font-size: 4.5vw;
+        line-height: 1.75;
+    }
+    .aboutus-img {
+        margin: 0 calc(50% - 50vw);
+        width: 100vw;
+    }
+    .aboutus-img img {
+        border-radius: 0;
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    /* MENU */
+    #menu {
+        margin-bottom: 95px;
+    }
+    #menu-font {
+        width: 27vw;
+        padding-bottom: 22px;
+    }
+    .menu-contents {
+        display: block;
+    }
+    .contents-item {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+    .menu-contents > div img {
+        border-radius: 0 41px 0 0;
+        width: 100%;
+    }
+    .menu-title {
+        color: #d30202;
+        font-size: 12vw;
+        margin-top: -30px;
+        padding-left: 12px;
+        padding-bottom: 20px;
+    }
+    .menu-text {
+        font-size: 4.5vw;
+        line-height: 1.58;
+    }
+    /* EVENT */
+    #event {
+        margin-bottom: 35px;
+    }
+    #event-font {
+        width: 173.8242px;
+        padding-bottom: 20px;
+    }
+    .event-box {
+        padding: 37px 10px 20px 0;
+    }
+    .event-box dl div {
+        display: block;
+        margin-bottom: 25px;
+        padding-left: 8%;
+    }
+    .event-box dl dt {
+        padding-left: 0;
+        padding-bottom: 5px;
+        font-size: 4.5vw;
+    }
+    .event-box dl dd {
+        font-size: 4.5vw;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    /* ACCESS */
+    #access-font {
+        width: 213.8354px;
+        padding-bottom: 10px;
+    }
+    iframe {
+        width: 100%;
+        height: 191px;
+    }
+    /* footer */
+    #footer {
+        margin-bottom: 45px;
+    }
+    #footer p {
+        color: #000;
+    }
+    .footer-contents {
+        display: block;
+    }
+    .footer-contents p img {
+        margin-bottom: 35px;
+    }
+    .footer-text {
+        padding-left: 0;
+        padding-bottom: 45px;
+    }
+    .footer-text p {
+        font-size: 18px;
+        padding-bottom: 22px;
+        line-height: 1;
+    }
+    .top img {
+        position: fixed;
+        right: 10px;
+        bottom: 20px;
+        width: 100px;
+    }
 }
