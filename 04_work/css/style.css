@@ -65,6 +65,8 @@ p {
     top: 0;
     left: 0;
     width: 100%;
+    padding: 10px 7.8% 10px 2.8%;
+    box-sizing: border-box;
     margin: 0 auto;
 }
 .header_logo {
@@ -81,7 +83,7 @@ p {
     font-weight: bold;
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
         "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-    margin-right: 54px;
+    margin-right: 50px;
 }
 .pc_nav ul li:last-child {
     margin-right: 0;
@@ -207,6 +209,9 @@ main {
 .gallery-photo img {
     width: 20%;
 }
+.sp_gallery-photo {
+    display: none;
+}
 
 /* EVENT */
 #event {
@@ -286,6 +291,9 @@ iframe {
 .sp_nav {
     display: none;
 }
+.sp_btn {
+    display: none;
+}
 @media screen and (max-width: 1024px) {
     .header_logo {
         width: 187.5195px;
@@ -294,6 +302,7 @@ iframe {
         display: none;
     }
     .sp_btn {
+        display: block;
         position: absolute;
         top: 10px;
         right: 24px;
@@ -377,24 +386,36 @@ iframe {
     }
 }
 @media screen and (max-width: 767px) {
+    /* 横幅少ないところの調整 */
+    .main-under,
+    #aboutus,
+    #menu,
+    #event,
+    footer {
+        padding: 0 5.8%;
+    }
+    main {
+        padding-top: 40px;
+    }
+
     /* メインの下 */
     .main-under {
         margin-bottom: 65px;
     }
     .main-under p:first-child {
-        font-size: 4.2vw;
+        font-size: 17px;
         padding-bottom: 25px;
     }
     .main-text {
         padding-bottom: 25px;
-        font-size: 10vw;
+        font-size: 38px;
     }
     .main-under p:last-child {
         display: none;
     }
     .main-under-bun {
         display: block;
-        font-size: 4.5vw;
+        font-size: 16px;
         line-height: 1.875;
     }
     /* ABOUT US */
@@ -420,12 +441,12 @@ iframe {
         margin: 0 auto;
     }
     .about-title {
-        font-size: 10vw;
+        font-size: 30px;
         line-height: 1.25;
         padding-bottom: 30px;
     }
     .about-text {
-        font-size: 4.5vw;
+        font-size: 16px;
         line-height: 1.75;
     }
     .aboutus-img {
@@ -464,9 +485,28 @@ iframe {
         padding-bottom: 20px;
     }
     .menu-text {
-        font-size: 4.5vw;
+        font-size: 17px;
         line-height: 1.58;
     }
+    /* gallery */
+    #gallery {
+        margin-bottom: 35px;
+    }
+    #gallery-font {
+        width: 245.1836px;
+        margin: 0 auto;
+        padding-bottom: 25px;
+    }
+    .gallery-photo {
+        display: none;
+    }
+    .sp_gallery-photo {
+        display: block;
+    }
+    .sp_gallery-photo img {
+        width: 100%;
+    }
+
     /* EVENT */
     #event {
         margin-bottom: 35px;
@@ -486,10 +526,10 @@ iframe {
     .event-box dl dt {
         padding-left: 0;
         padding-bottom: 5px;
-        font-size: 4.5vw;
+        font-size: 16px;
     }
     .event-box dl dd {
-        font-size: 4.5vw;
+        font-size: 16px;
         padding: 0;
         margin: 0;
         overflow: hidden;
@@ -497,6 +537,9 @@ iframe {
         white-space: nowrap;
     }
     /* ACCESS */
+    #access {
+        margin-bottom: 50px;
+    }
     #access-font {
         width: 213.8354px;
         padding-bottom: 10px;
