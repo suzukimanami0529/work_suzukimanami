@@ -403,19 +403,19 @@ iframe {
         margin-bottom: 65px;
     }
     .main-under p:first-child {
-        font-size: 17px;
+        font-size: 4vw;
         padding-bottom: 25px;
     }
     .main-text {
         padding-bottom: 25px;
-        font-size: 38px;
+        font-size: 9vw;
     }
     .main-under p:last-child {
         display: none;
     }
     .main-under-bun {
         display: block;
-        font-size: 16px;
+        font-size: 4vw;
         line-height: 1.875;
     }
     /* ABOUT US */
@@ -436,7 +436,7 @@ iframe {
     }
     #aboutus-font-sp {
         display: block;
-        width: 40vw;
+        width: 160px;
         padding-bottom: 15px;
         margin: 0 auto;
     }
@@ -463,7 +463,7 @@ iframe {
         margin-bottom: 95px;
     }
     #menu-font {
-        width: 27vw;
+        width: 88px;
         padding-bottom: 22px;
     }
     .menu-contents {
@@ -472,10 +472,6 @@ iframe {
     .contents-item {
         width: 100%;
         margin-bottom: 60px;
-    }
-    .menu-contents > div img {
-        border-radius: 0 41px 0 0;
-        width: 100%;
     }
     .menu-title {
         color: #d30202;
@@ -493,7 +489,7 @@ iframe {
         margin-bottom: 35px;
     }
     #gallery-font {
-        width: 245.1836px;
+        width: 142px;
         margin: 0 auto;
         padding-bottom: 25px;
     }
@@ -512,7 +508,7 @@ iframe {
         margin-bottom: 35px;
     }
     #event-font {
-        width: 173.8242px;
+        width: 100px;
         padding-bottom: 20px;
     }
     .event-box {
@@ -541,7 +537,7 @@ iframe {
         margin-bottom: 50px;
     }
     #access-font {
-        width: 213.8354px;
+        width: 124px;
         padding-bottom: 10px;
     }
     iframe {

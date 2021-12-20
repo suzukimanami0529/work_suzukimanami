@@ -176,8 +176,15 @@
             $('.sp_btn,.sp_nav li').click(function () {
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
-
             });
+            $('a[href^="#"]').click(function () {
+                let speed = 400;
+                let type = "swing";
+                let href = $(this).attr("href");
+                let target = $(href == "#" || href == "" ? 'html' : href);
+                let position = target.offset().top;
+                $('html,body').animate({ scrollTop: position }, speed, type);
+            })
         });
     </script>
 </body>
