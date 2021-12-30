@@ -68,6 +68,7 @@ p {
     padding: 10px 7.8% 10px 2.8%;
     box-sizing: border-box;
     margin: 0 auto;
+    z-index: 1000;
 }
 .header_logo {
     width: 226.76px;
@@ -207,7 +208,7 @@ main {
     display: flex;
 }
 .gallery-photo img {
-    width: 20%;
+    width: 100%;
 }
 .sp_gallery-photo {
     display: none;
@@ -572,4 +573,23 @@ iframe {
         bottom: 20px;
         width: 100px;
     }
+}
+
+/* スライダー調整 */
+.slick-next {
+    display: none !important;
+}
+.slick-dots {
+    bottom: 20px;
+}
+.slick-dots li button:before {
+    color: #fff;
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+/* ギャラリーのモーダルウィンドウ調整 */
+.lb-nav a.lb-next:hover {
+    opacity: 0;
 }

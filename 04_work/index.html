@@ -7,9 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>第4回work</title>
     <meta name="description" content="デザインカフェのサイトです">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css">
 </head>
+
 
 <body>
     <div class="body">
@@ -39,12 +46,21 @@
                 </nav>
             </div>
             <div class="slider">
-                <picture>
-                    <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
-                    <img src="images/pc_first-100.jpg" alt="カフェの様子">
-                </picture>
+                <div>
+                    <picture>
+                        <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                        <img src="images/pc_first-100.jpg" alt="カフェの様子">
+                    </picture>
+                </div>
+                <div>
+                    <picture>
+                        <source srcset="images/sp_main_vs_2@2x-100.jpg" media="(max-width:767px)">
+                        <img src="images/slider_2.jpg" alt="カフェの様子">
+                    </picture>
+                </div>
             </div>
         </header>
+
         <main>
             <section class="main-under">
                 <p>Have a happy day From a cup of coffee.</p>
@@ -106,15 +122,37 @@
                 <h2 id="gallery-font">
                     <img src=" images/gallery@2x.png" alt="GALLERYの文字">
                 </h2>
-                <div class="gallery-photo">
-                    <img src="images/pc_gallary_05-100.jpg" alt="カフェの様子">
-                    <img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆">
-                    <img src="images/pc_gallary_03-100.jpg" alt="カフェの様子">
-                    <img src="images/pc_gallary_02-100.jpg" alt="カフェの店内">
-                    <img src="images/pc_gallary_01-100.jpg" alt="カフェラテを入れる様子">
+                <div>
+                    <ul class="gallery-photo">
+                        <li><a href="images/pc_gallary_05-100.jpg" data-lightbox="simple-group" data-title="コーヒー05"><img
+                                    src="images/pc_gallary_05-100.jpg" alt="カフェの様子"></a></li>
+                        <li><a href="images/pc_gallary_04-100.jpg" data-lightbox="simple-group" data-title="コーヒー04"><img
+                                    src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></a></li>
+                        <li><a href="images/pc_gallary_03-100.jpg" data-lightbox="simple-group" data-title="コーヒー03"><img
+                                    src="images/pc_gallary_03-100.jpg" alt="カフェの様子"></a></li>
+                        <li><a href="images/pc_gallary_02-100.jpg" data-lightbox="simple-group" data-title="コーヒー02"><img
+                                    src="images/pc_gallary_02-100.jpg" alt="カフェの店内"></a></li>
+                        <li><a href="images/pc_gallary_01-100.jpg" data-lightbox="simple-group" data-title="コーヒー01"><img
+                                    src="images/pc_gallary_01-100.jpg" alt="カフェラテを入れる様子"></a></li>
+                        <li><a href="images/pc_gallary_01-100.jpg" data-lightbox="simple-group" data-title="コーヒー01"><img
+                                    src="images/pc_gallary_01-100.jpg" alt="カフェラテを入れる様子"></a></li>
+                    </ul>
                 </div>
-                <div class="sp_gallery-photo">
-                    <img src="images/pc_gallary_05-100.jpg" alt="カフェの様子">
+                <div>
+                    <ul class="sp_gallery-photo">
+                        <li><a href="images/pc_gallary_05-100.jpg" data-lightbox="simple-group" data-title="コーヒー05"><img
+                                    src="images/pc_gallary_05-100.jpg" alt="カフェの様子"></a></li>
+                        <li><a href="images/pc_gallary_04-100.jpg" data-lightbox="simple-group" data-title="コーヒー04"><img
+                                    src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></a></li>
+                        <li><a href="images/pc_gallary_03-100.jpg" data-lightbox="simple-group" data-title="コーヒー03"><img
+                                    src="images/pc_gallary_03-100.jpg" alt="カフェの様子"></a></li>
+                        <li><a href="images/pc_gallary_02-100.jpg" data-lightbox="simple-group" data-title="コーヒー02"><img
+                                    src="images/pc_gallary_02-100.jpg" alt="カフェの店内"></a></li>
+                        <li><a href="images/pc_gallary_01-100.jpg" data-lightbox="simple-group" data-title="コーヒー01"><img
+                                    src="images/pc_gallary_01-100.jpg" alt="カフェラテを入れる様子"></a></li>
+                        <li><a href="images/pc_gallary_01-100.jpg" data-lightbox="simple-group" data-title="コーヒー01"><img
+                                    src="images/pc_gallary_01-100.jpg" alt="カフェラテを入れる様子"></a></li>
+                    </ul>
                 </div>
             </section>
             <section id="event">
@@ -184,7 +222,28 @@
                 let target = $(href == "#" || href == "" ? 'html' : href);
                 let position = target.offset().top;
                 $('html,body').animate({ scrollTop: position }, speed, type);
-            })
+            });
+            $('.slider').slick({
+                autoplay: true,
+                autoplayspeed: 2000,
+                dots: true,
+            });
+            $('.gallery-photo').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2500,
+            });
+            lightbox.option({
+                'resizeDuration': 400,
+                'wrapAround': true,
+            });
+            $('.sp_gallery-photo').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2500,
+            });
         });
     </script>
 </body>
